@@ -2,6 +2,7 @@
 <html data-wf-page="69883573661b8c79ec728d9d" data-wf-site="698832a2ee5826541e6c8c1c">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact Us</title>
   <meta content="Contact Us" property="og:title">
   <meta content="Contact Us" property="twitter:title">
@@ -50,6 +51,59 @@
     gap: 6px;
     font-size: 14px;
   }
+/* GLOBAL MOBILE FIX */
+@media (max-width: 768px) {
+
+  /* Fix all grids */
+  .w-layout-layout,
+  .w-layout-grid,
+  .contact5_component {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  /* Hero section fix */
+  .quick-stack-2 {
+    flex-direction: column !important;
+  }
+
+  .cell-3,
+  .cell-4,
+  .cell-5,
+  .cell-2 {
+    width: 100% !important;
+  }
+
+  /* Images responsive */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Trio images stack */
+  .image-wrapper-trio {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px;
+  }
+
+  /* Contact form stack */
+  .contact5_component {
+    flex-direction: column !important;
+  }
+
+  .contact5_content,
+  .contact5_form-block {
+    width: 100% !important;
+  }
+
+  /* Footer center properly */
+  .footer7_top-wrapper {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+}
   </style>
 </head>
 <body class="body-3">
