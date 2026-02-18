@@ -1,111 +1,280 @@
-<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Mon Feb 09 2026 13:10:19 GMT+0000 (Coordinated Universal Time)  -->
-<html data-wf-page="6988353eb40258cced048f11" data-wf-site="698832a2ee5826541e6c8c1c">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>About Us</title>
-  <meta content="About Us" property="og:title">
-  <meta content="About Us" property="twitter:title">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <meta content="Webflow" name="generator">
-  <link href="css/normalize.css" rel="stylesheet" type="text/css">
-  <link href="css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="css/babulal-jewellers-16d256.webflow.css" rel="stylesheet" type="text/css">
-  <style>
-  .footer-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 8px;
-  }
+<meta charset="utf-8">
+<title>About Us | Babulal Jewellers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  .footer-legal-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-    font-size: 14px;
-  }
+<link href="css/normalize.css" rel="stylesheet">
+<link href="css/webflow.css" rel="stylesheet">
+<link href="css/babulal-jewellers-16d256.webflow.css" rel="stylesheet">
+
+<link href="images/favicon.png" rel="shortcut icon">
+
+<!-- Premium Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+  background:#eeede8;
+  margin:0;
+  font-family:'Lato',sans-serif;
+}
+
+/* ===== HEADER ===== */
+.header{
+  text-align:center;
+  padding:40px 0 10px;
+}
+.header img{
+  width:140px;
+}
+.navbar{
+  margin-top:15px;
+}
+.navbar a{
+  margin:0 18px;
+  text-decoration:none;
+  color:#6f7b5b;
+  font-weight:500;
+}
+.navbar a:hover{
+  border-bottom:2px solid #6f7b5b;
+}
+
+/* ===== HEADING ===== */
+.legacy-heading{
+  text-align:center;
+  font-size:48px;
+  margin-top:60px;
+  color:#3f4a36;
+}
+.legacy-text{
+  max-width:900px;
+  margin:20px auto 60px;
+  text-align:center;
+  font-size:18px;
+  line-height:1.8;
+  color:#444;
+  padding:0 20px;
+}
+
+/* ===== IMAGE GRID ===== */
+.image-grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:40px;
+  padding-bottom:80px;
+}
+.image-grid img{
+  width:420px;
+  border-radius:14px;
+  cursor:pointer;
+  transition:.4s;
+}
+.image-grid img:hover{
+  transform:scale(1.05);
+  box-shadow:0 15px 40px rgba(0,0,0,0.25);
+}
+
+/* ===== FULLSCREEN MODAL ===== */
+.modal{
+  display:none;
+  position:fixed;
+  z-index:9999;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.95);
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+}
+.modal img{
+  max-width:90%;
+  max-height:80vh;
+}
+.close-btn{
+  position:absolute;
+  top:30px;
+  right:40px;
+  font-size:30px;
+  color:white;
+  cursor:pointer;
+}
+.arrow{
+  position:absolute;
+  top:50%;
+  font-size:40px;
+  color:white;
+  cursor:pointer;
+  user-select:none;
+}
+.prev{ left:40px; }
+.next{ right:40px; }
+
+/* ===== FOOTER ===== */
+.footer{
+  background:#f3f1ea;
+  text-align:center;
+  padding:70px 20px;
+}
+.footer img{
+  width:120px;
+  margin-bottom:25px;
+}
+.footer-address{
+  font-size:16px;
+  line-height:1.8;
+  margin-bottom:25px;
+  color:#555;
+}
+
+/* Enhanced Social Icons */
+/* ===== Premium Minimal Social Icons ===== */
+
+.footer-social a{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  margin:0 12px;
+  font-size:18px;
+  color:#6f7b5b;              /* Theme Olive Color */
+  border:1.5px solid #6f7b5b; /* Elegant Border */
+  background:transparent;
+  transition:all 0.3s ease;
+}
+
+.footer-social a:hover{
+  background:#6f7b5b;
+  color:white;
+  transform:translateY(-3px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.footer-bottom{
+  margin-top:25px;
+  font-size:14px;
+}
+
+.footer-bottom a{
+  color:#6f7b5b;
+  text-decoration:none;
+}
+.footer-bottom a:hover{
+  text-decoration:underline;
+}
+
 </style>
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
-  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
-  <script type="text/javascript">WebFont.load({  google: {    families: ["Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic"]  }});</script>
-  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
-  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
-  <link href="images/webclip.png" rel="apple-touch-icon">
 </head>
-<body class="body-2">
-  <div class="logo-section padding-global-2 margin-small-custom">
-    <div class="logo-container"><img width="156" loading="lazy" alt="" src="images/64612cf5215f1e3513ba754f_logo-green.svg" class="image-7"></div>
-    <div class="nav-links-wrapper">
-      <a href="index.html" class="nav-item">Home</a>
-      <a href="about-us.html" aria-current="page" class="nav-item w--current">About</a>
-      <a href="contact-us.html" class="nav-item">Contact</a>
-      <a href="gallery.html" class="nav-item">Gallery</a>
-    </div>
-  </div>
-  <div class="page-wrapper">
-    <div class="div-block-26">
-      <div class="text-wrapper">
-        <h1 class="is-h2">Babulal Jewellers&#x27; Legacy</h1>
-        <div class="text-block-11">With a rich heritage spanning more than 70 years, Babulal Jewellers has stood as a symbol of unparalleled craftsmanship and timeless sophistication. Our creations reflect the artistry of jewelry-making, seamlessly blending opulence with cherished life moments. Each piece we meticulously craft serves as a unique narrative of love, celebrations, and enduring legacies, adorned with the most exquisite gemstones and metals. Our esteemed patrons form the bedrock of our business, entrusting us with their dreams and enabling us to consistently provide outstanding, flawless experiences.</div>
-      </div>
-      <div class="image-wrapper-trio"><img width="262" id="w-node-_01d8d127-4f3d-9d32-6153-8a1166e7d087-ed048f11" alt="" src="https://cdn.prod.website-files.com/6985b2bc8bc492069ad64fab/6985b8d80d5fa6916a5f2ced_1.jpg" loading="lazy" class="image-13"><img width="266" id="w-node-_01d8d127-4f3d-9d32-6153-8a1166e7d088-ed048f11" alt="" src="https://cdn.prod.website-files.com/6985b2bc8bc492069ad64fab/6985b8d80d5fa6916a5f2cf7_2.jpg" loading="lazy" class="image-14"><img width="266" id="w-node-_01d8d127-4f3d-9d32-6153-8a1166e7d089-ed048f11" alt="" src="https://cdn.prod.website-files.com/6985b2bc8bc492069ad64fab/6985b8d80d5fa6916a5f2cf5_3.jpg" loading="lazy" class="image-15"></div>
-      <div class="image-wrapper-trio"><img width="262" id="w-node-_01d8d127-4f3d-9d32-6153-8a1166e7d08b-ed048f11" alt="" src="images/4_1.jpg" loading="lazy" class="image-13"><img width="267" id="w-node-_01d8d127-4f3d-9d32-6153-8a1166e7d08c-ed048f11" alt="" src="images/5_1.jpg" loading="lazy" class="image-14"><img width="266" id="w-node-_01d8d127-4f3d-9d32-6153-8a1166e7d08d-ed048f11" alt="" src="images/6_1.jpg" loading="lazy" class="image-15"></div>
-      <div class="image-wrapper-trio"><img width="271" id="w-node-_01d8d127-4f3d-9d32-6153-8a1166e7d08f-ed048f11" alt="" src="images/7.jpg" loading="lazy" class="image-13"><img width="272" id="w-node-_01d8d127-4f3d-9d32-6153-8a1166e7d090-ed048f11" alt="" src="images/8.jpg" loading="lazy" class="image-14"><img width="270" id="w-node-_01d8d127-4f3d-9d32-6153-8a1166e7d091-ed048f11" alt="" src="images/9.jpg" loading="lazy" class="image-15"></div>
-    </div>
-    <div class="footer7_component">
-      <div class="padding-global-3">
-        <div class="container-large">
-          <div class="padding-vertical padding-xxlarge">
-            <div class="padding-bottom padding-xxlarge">
-              <div class="footer7_top-wrapper">
-                <a href="#" class="footer7_logo-link w-inline-block"><img width="105.5" src="images/64612cf5215f1e3513ba754f_logo-green.svg" alt=""></a>
-                <div>
-                  <div class="text-block-9">Soni Kishor Kumar Babulal Jewellers, Raipur, Chhattisgarh. <br>Address; Moti Bagh Chowk, Raj Bhawan Road, Civil Lines, Raipur Chhattisgarh, 492001</div>
-                </div>
-              </div>
-            </div>
-            <div class="line-divider"></div>
-            <div class="padding-top padding-medium">
-              <div class="footer7_bottom-wrapper footer-center">
-  <div class="footer7_credit-text">
-    <!-- Footer Social Icons -->
-<div class="footer-social-icons">
-  <a href="https://www.instagram.com/babulaljeweller/?hl=en" target="_blank" aria-label="Instagram" class="footer-social-link">
-    <!-- Instagram Icon -->
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-      <path d="M7 2H17C19.761 2 22 4.239 22 7V17C22 19.761 19.761 22 17 22H7C4.239 22 2 19.761 2 17V7C2 4.239 4.239 2 7 2Z" stroke="currentColor" stroke-width="2"/>
-      <path d="M12 7C9.239 7 7 9.239 7 12C7 14.761 9.239 17 12 17C14.761 17 17 14.761 17 12C17 9.239 14.761 7 12 7Z" stroke="currentColor" stroke-width="2"/>
-      <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
-    </svg>
-  </a>
 
-  <a href="https://www.facebook.com/babulaljewellers/" target="_blank" aria-label="Facebook" class="footer-social-link">
-    <!-- Facebook Icon -->
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-      <path d="M18 2H15C13.674 2 12.402 2.527 11.464 3.464C10.527 4.402 10 5.674 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.735 14.105 6.48 14.293 6.293C14.48 6.105 14.735 6 15 6H18V2Z" fill="currentColor"/>
-    </svg>
-  </a>
-</div>
-    © 2023 Babulal Jewellers. All rights reserved.
-  </div>
+<body>
 
-  <div class="footer7_legal-list footer-legal-center">
-    <a href="privacy-policy.html" class="footer7_legal-link">Privacy Policy</a>
-    <span>|</span>
-    <a href="terms-of-service.html" class="footer7_legal-link">Terms of Service</a>
+<!-- HEADER -->
+<div class="header">
+  <img src="images/64612cf5215f1e3513ba754f_logo-green.svg">
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about-us.html" style="border-bottom:2px solid #6f7b5b;">About</a>
+    <a href="contact-us.html">Contact</a>
+    <a href="gallery.html">Gallery</a>
   </div>
 </div>
 
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=698832a2ee5826541e6c8c1c" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="js/webflow.js" type="text/javascript"></script>
+<!-- CONTENT -->
+<h1 class="legacy-heading">Babulal Jewellers' Legacy</h1>
+<div class="legacy-text">
+With a rich heritage spanning more than 70 years, Babulal Jewellers stands as a symbol of timeless elegance and unmatched craftsmanship.
+</div>
+
+<div class="image-grid">
+<img src="images/4_1.jpg" onclick="openModal(0)">
+<img src="images/5_1.jpg" onclick="openModal(1)">
+<img src="images/6_1.jpg" onclick="openModal(2)">
+<img src="images/7.jpg" onclick="openModal(3)">
+<img src="images/8.jpg" onclick="openModal(4)">
+<img src="images/9.jpg" onclick="openModal(5)">
+</div>
+
+<!-- FULLSCREEN MODAL -->
+<div class="modal" id="galleryModal">
+<span class="close-btn" onclick="closeModal()">&times;</span>
+<span class="arrow prev" onclick="changeSlide(-1)">&#10094;</span>
+<img id="modalImage">
+<span class="arrow next" onclick="changeSlide(1)">&#10095;</span>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+<img src="images/64612cf5215f1e3513ba754f_logo-green.svg">
+
+<div class="footer-address">
+Soni Kishor Kumar Babulal Jewellers<br>
+Moti Bagh Chowk, Raj Bhawan Road,<br>
+Civil Lines, Raipur, Chhattisgarh 492001
+</div>
+
+<div class="footer-social">
+<a href="https://www.instagram.com/babulaljeweller/?hl=en" target="_blank" class="instagram">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://www.facebook.com/babulaljewellers/" target="_blank" class="facebook">
+<i class="fab fa-facebook-f"></i>
+</a>
+</div>
+
+<div class="footer-bottom">
+© 2026 Babulal Jewellers. All rights reserved.<br>
+<a href="privacy-policy.html">Privacy Policy</a> |
+<a href="terms-of-service.html">Terms of Service</a>
+</div>
+</div>
+
+<!-- JAVASCRIPT FOR SLIDER -->
+<script>
+
+let images = [
+"images/4_1.jpg",
+"images/5_1.jpg",
+"images/6_1.jpg",
+"images/7.jpg",
+"images/8.jpg",
+"images/9.jpg"
+];
+
+let currentIndex = 0;
+
+function openModal(index){
+  currentIndex = index;
+  document.getElementById("galleryModal").style.display="flex";
+  document.getElementById("modalImage").src = images[currentIndex];
+}
+
+function closeModal(){
+  document.getElementById("galleryModal").style.display="none";
+}
+
+function changeSlide(direction){
+  currentIndex += direction;
+  if(currentIndex < 0) currentIndex = images.length-1;
+  if(currentIndex >= images.length) currentIndex = 0;
+  document.getElementById("modalImage").src = images[currentIndex];
+}
+
+document.addEventListener("keydown", function(e){
+  if(e.key==="ArrowRight") changeSlide(1);
+  if(e.key==="ArrowLeft") changeSlide(-1);
+  if(e.key==="Escape") closeModal();
+});
+
+</script>
+
 </body>
 </html>
