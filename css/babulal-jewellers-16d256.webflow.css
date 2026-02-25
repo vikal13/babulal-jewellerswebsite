@@ -1754,3 +1754,212 @@
   display: block;
 }
 
+/* About-style footer used across pages */
+.footer {
+  background: #f3f1ea;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.footer img {
+  width: 120px;
+  margin-bottom: 25px;
+}
+
+.footer-address {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.footer-social a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin: 0 12px;
+  font-size: 18px;
+  color: #6f7b5b;
+  border: 1.5px solid #6f7b5b;
+  background: transparent;
+  transition: all .3s ease;
+}
+
+.footer-social a:hover {
+  background: #6f7b5b;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px #00000026;
+}
+
+.footer-social a svg {
+  display: block;
+}
+
+.footer-bottom {
+  margin-top: 25px;
+  font-size: 14px;
+}
+
+.footer-bottom a {
+  color: #6f7b5b;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 767px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .padding-global-2,
+  .padding-global-3 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .logo-section,
+  .logo-section.padding-global-2.margin-small-custom {
+    margin-bottom: 1rem;
+    padding: .75rem 1rem .5rem;
+  }
+
+  .nav-links-wrapper {
+    flex-wrap: wrap;
+    gap: .5rem .75rem;
+    margin-top: .75rem;
+  }
+
+  .nav-item {
+    padding-left: .5rem;
+    padding-right: .5rem;
+    font-size: 1rem;
+  }
+
+  .quick-stack-2 {
+    padding-left: 0;
+  }
+
+  #w-node-_1aeaddac-7c29-2368-00d7-b2ace8693633-1e6c8c5e,
+  #w-node-_6a163d45-9598-c4a2-57ad-5f4da048d4e0-1e6c8c5e,
+  #w-node-fa6a8802-e392-b20b-6c1a-9f2153870021-1e6c8c5e,
+  #w-node-_1aeaddac-7c29-2368-00d7-b2ace869366b-1e6c8c5e,
+  .contact5_component,
+  .gallery6_component,
+  .gallery6_row,
+  .image-wrapper-trio {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-section-text-wrapper.margin-small {
+    margin: 1rem 0;
+  }
+
+  .heading-2 {
+    font-size: 2rem;
+    line-height: 1.05;
+  }
+
+  .text-size-medium,
+  .text-block-5,
+  .text-block-6 {
+    font-size: 1rem;
+    line-height: 1.45;
+  }
+
+  .text-block-6 {
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .image-8 {
+    max-width: 80%;
+    margin: 1.5rem auto;
+  }
+
+  .button-wrapper {
+    flex-direction: column;
+    gap: .45rem;
+    align-items: stretch;
+    margin-top: 1rem;
+  }
+
+  .button-wrapper .button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .button.is-large,
+  .button.is-secondary {
+    margin-top: .5rem;
+  }
+
+  .button.is-large.cta {
+    margin: .5rem auto 0;
+  }
+
+  .section_home-artisoniplug .cell-4 {
+    align-items: center;
+  }
+
+  .section_home-artisoniplug .heading-2 {
+    text-align: center;
+    line-height: 1.15;
+    margin-bottom: .5rem;
+  }
+
+  .section_home-artisoniplug .image-11 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 72%;
+  }
+
+  .gallery18_mask {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .gallery18_slide {
+    padding-left: .25rem;
+    padding-right: .25rem;
+  }
+
+  .gallery18_arrow {
+    width: 2.5rem;
+    height: 2.5rem;
+    bottom: 1rem;
+  }
+
+  .padding-vertical.padding-xxlarge {
+    padding: 2rem 0 1rem;
+  }
+
+  .footer7_bottom-wrapper {
+    flex-direction: column;
+    gap: .75rem;
+    margin-bottom: 0;
+  }
+
+  .footer7_legal-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: .5rem;
+  }
+
+  .footer {
+    padding: 44px 16px;
+  }
+
+  .footer-address {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
